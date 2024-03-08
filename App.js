@@ -1,20 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, View, StatusBar} from 'react-native';
+import Placar from './src/components/Placar';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <View style={styles.tela}>
+    <StatusBar barStyle="light-content" backgroundColor="#03001C"/>
+
+    <Placar titulo="Home"/>
+
+    <Placar titulo="Guest"/>
+
+  </View>
 }
 
 const styles = StyleSheet.create({
-  container: {
+  tela: {
+    backgroundColor: "#03001C",
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  }
+})
